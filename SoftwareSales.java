@@ -3,6 +3,9 @@ public class SoftwareSales
   private final double retail = 99;
   private double numSold;
   private double disc;
+  public SoftwareSales() {
+    numSold = 0;
+  }
   public SoftwareSales(double sold) {
     numSold = sold;
   }
