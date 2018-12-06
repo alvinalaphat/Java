@@ -11,13 +11,30 @@ public class Optics{
     dob = d;
     ho = h;
   }
-  public double di(){
+  public String diMethod(){
     di = Math.pow((Math.pow(focus, -1) - Math.pow(dob, -1)), -1);
-    return di;
+    String type = "";
+    if (di < 0){
+      type = "The object is virtual and is " + di + " cm behind the mirror or behind the lens";
+    }
+    else {
+      type = "The object is real and is " + di + " cm in front of the mirror or lens";
+    }
+    return type;
   }
-  public double magnification(){
+  public String magnificationMethod(){
      magnification = di/dob;
-     return magnification;
+     String str = "";
+     if (Math.pow(magnification, 2) < 1){
+       str = "The image of the object is reduced by " + magnification + " times its original size";
+     }
+     else if (magnification == 1) {
+       str = "The image of the object is the same size as the original object";
+     }
+     else{
+       str = "The image of the object is increased by " + magnification + " times its original size";
+     }
+     return str;
   }
   public double hi(){
     hi = magnification * ho;

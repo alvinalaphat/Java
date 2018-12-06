@@ -15,8 +15,8 @@ public class Opticsdemo{
     System.out.println("Focal length: " + optics.focus);
     System.out.println("Object distance: " + optics.dob);
     System.out.println("Object height: " + optics.ho);
-    System.out.println("Image distance: " + optics.di());
-    System.out.println("Magnification: " + optics.magnification());
-    System.out.println("Image height: " + optics.hi());
+    System.out.println("Image distance: " + optics.diMethod());
+    System.out.println("Magnification: " + optics.magnificationMethod());
+    System.out.printf("Image height: %.2f\n", optics.hi());
   }
 }
