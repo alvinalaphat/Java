@@ -15,10 +15,13 @@ public class Optics{
     di = Math.pow((Math.pow(focus, -1) - Math.pow(dob, -1)), -1);
     String type = "";
     if (di < 0){
-      type = "The object is virtual and is " + di + " cm behind the mirror or behind the lens";
+      type = "The image is virtual and is " + di + " cm behind the mirror or behind the lens";
+    }
+    else if(dob == focus) {
+    type = "No image is produced";
     }
     else {
-      type = "The object is real and is " + di + " cm in front of the mirror or lens";
+      type = "The image is real and is " + di + " cm in front of the mirror or lens";
     }
     return type;
   }
